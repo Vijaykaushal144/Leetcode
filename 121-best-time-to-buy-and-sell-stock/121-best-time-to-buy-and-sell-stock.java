@@ -8,7 +8,7 @@ class Solution {
             {
                 minprice=prices[i];
             }
-            else if(prices[i]-minprice>=maxprofit)
+            else if(prices[i]-minprice>maxprofit)
             {
                 maxprofit=prices[i]-minprice;
             }
