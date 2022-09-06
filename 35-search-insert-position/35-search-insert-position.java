@@ -10,7 +10,7 @@ class Solution {
             {
             st=mid+1;
             }
-            else if(nums[mid]>target)
+            else 
             {
                 end=mid-1;
             }
