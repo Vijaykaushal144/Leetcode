@@ -1,11 +1,10 @@
 class Solution {
     public int[][] transpose(int[][] matrix) {
-        int row=matrix.length;
-        int column=matrix[0].length;
-        int newmatrix[][]=new int[column][row];
-        for(int i=0;i<row;i++)
+       
+        int newmatrix[][]=new int[matrix[0].length][matrix.length];
+        for(int i=0;i<matrix.length;i++)
         {
-            for(int j=0;j<column;j++)
+            for(int j=0;j<matrix[0].length;j++)
             {
                 newmatrix[j][i]=matrix[i][j];
             }
