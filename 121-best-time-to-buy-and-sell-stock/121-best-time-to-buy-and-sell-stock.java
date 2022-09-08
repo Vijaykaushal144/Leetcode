@@ -6,11 +6,12 @@ class Solution {
         {
             if(prices[i]<minvalue)
                 minvalue=prices[i];
+            maxprofit=Math.max(prices[i]-minvalue,maxprofit);
             
-            else if(maxprofit<prices[i]-minvalue)
-            {
-                maxprofit=prices[i]-minvalue;
-            }
+            // else if(maxprofit<prices[i]-minvalue)
+            // {
+            //     maxprofit=prices[i]-minvalue;
+            // }
         }
           
         
