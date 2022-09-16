@@ -1,10 +1,11 @@
 class Solution {
-    public boolean containsDuplicate(int[] nums) 
+    public boolean containsDuplicate(int[] n) 
     {
-        Arrays.sort(nums);
-        int n=nums.length;
-        for(int i=0;i<n-1;i++){
-            if(nums[i]==nums[i+1]){
+        Arrays.sort(n);
+       
+        //int n=nums.length;
+        for(int i=0;i<n.length-1;i++){
+            if(n[i]==n[i+1]){
                 return true;
             }
         }
