@@ -13,27 +13,36 @@ class Solution {
         // }
         // return false;
         
-        int row=matrix.length;
-        int column=matrix[0].length;
-        int st=0;
-        int end=(row*column)-1;
-       int  mid=st+(end-st)/2;
-        while(st<=end)
+       //  int row=matrix.length;
+       //  int column=matrix[0].length;
+       //  int st=0;
+       //  int end=(row*column)-1;
+       // int  mid=st+(end-st)/2;
+       //  while(st<=end)
+       //  {
+       //      int element=matrix[mid/column][mid%column];
+       //      if(element==target)
+       //      {
+       //          return true;
+       //      }
+       //      if(element<target)
+       //      {
+       //          st=mid+1;
+       //      }
+       //      if(element>target)
+       //      {
+       //          end=mid-1;
+       //      }
+       //      mid=st+(end-st)/2;
+       //  }
+       //  return false;
+        for(int i=0;i<=matrix.length-1;i++)
         {
-            int element=matrix[mid/column][mid%column];
-            if(element==target)
+            for(int j=0;j<=matrix[0].length-1;j++)
+                
             {
-                return true;
+                if(matrix[i][j]==target) return true;
             }
-            if(element<target)
-            {
-                st=mid+1;
-            }
-            if(element>target)
-            {
-                end=mid-1;
-            }
-            mid=st+(end-st)/2;
         }
         return false;
     }
