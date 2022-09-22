@@ -13,17 +13,16 @@ class Solution {
             left=right+1;
             right=left;
         }
-        return new String(c);
-        
+        return new String(c);  
     }
     
    void reverse(char [] str,int i,int j)
    {
-       for(;i<j;i++,j--)
+       while(i<j)
        {
            char temp=str[i];
-           str[i]=str[j];
-           str[j]=temp;
+           str[i++]=str[j];
+           str[j--]=temp;
        }
    }
 }
