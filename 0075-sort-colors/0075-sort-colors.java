@@ -1,31 +1,53 @@
 class Solution {
-    public void sortColors(int[] nums) {
+    public static void sortColors(int[] nums) {
         // two pointer approach for solving this;
-       //  int low=0;
-       //  int last=nums.length-1;
-       //  int mid=0;
-       // while(mid<=last)
-       // {
-       //     if(nums[mid]==0)
-       //     {
-       //         int temp=nums[low];
-       //        nums[low]=nums[mid];
-       //         nums[mid]=temp;
-       //         low++;mid++;
-       //     }
-       //     else if(nums[mid]==1)
-       //     {
-       //         mid++;
-       //     }
-       //     else
-       //     {
-       //         int  temp=nums[mid];
-       //         nums[mid]=nums[last];
-       //         nums[last]=temp;
-       //         last--;
-       //     }
-       // }
-        Arrays.sort(nums);
+       
+//         for(int i=0;i<nums.length;i++)
+//         {
+//             int minindex=i;
+//             for(int j=i+1;j<nums.length;j++)
+//             {
+//                 if(nums[j]<=nums[minindex])
+//                 {
+//                     minindex=j;
+                   
+//                 }
+//                  // swap(nums[minindex],nums[i]);
+//                 int temp=nums[minindex];
+//                 nums[minindex]=nums[i];
+//                 nums[i]=temp;
+                
+//             }
+        int st=0;
+        int mid=0;
+        int len=nums.length-1;
+        while(mid<=len)
+        {
+            switch(nums[mid])
+            {
+                case 0:{
+                    int temp=nums[mid];
+                    nums[mid++]=nums[st];
+                    nums[st++]=temp;
+                    break;
+                }
+                case 1:
+                    {
+                        mid++;
+                        break;
+                    }
+                case 2:
+                    {
+                        int temp=nums[mid];
+                        nums[mid]=nums[len];
+                        nums[len--]=temp;
+                        break;
+                    }
+                    
+                    
+            }
+        }
+        }
         
-    }
+    
 }
