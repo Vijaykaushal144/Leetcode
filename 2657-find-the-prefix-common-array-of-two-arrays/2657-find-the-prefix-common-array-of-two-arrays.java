@@ -21,21 +21,25 @@ class Solution {
         
 //         return third;
         
-        
         int third[]= new int[A.length];
-        int frequency[]= new int[A.length+1];
+        int freq[]= new int[A.length+1];
+        
         int count=0;
         for(int i=0;i<A.length;i++)
         {
-            frequency[A[i]]++;
-            if(frequency[A[i]]==2) count++;
-            frequency[B[i]]++;
-            if(frequency[B[i]]==2) count++;
-            third[i]=count;
+            freq[A[i]]++;
+            if(freq[A[i]]==2) count++;
             
+            freq[B[i]]++;
+            if(freq[B[i]]==2) count++;
+            
+            third[i]=count;
             
         }
         return third;
+        
+        
+       
         
     }
 }
