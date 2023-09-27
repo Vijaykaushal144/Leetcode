@@ -1,25 +1,29 @@
 class Solution {
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> result=new ArrayList<List<Integer>>();
-        LinkedList<Integer> comb=new LinkedList<Integer>();
-        this.backtrack(target,comb,0,candidates,result);
-        return  result;
+    public List<List<Integer>> combinationSum(int[] c, int target) {
+        
+        List<List<Integer>> ans= new ArrayList<>();
+        findCombination(0,c,target,ans, new ArrayList());
+        return ans;
+       
     }
-     private void backtrack(int remain,LinkedList<Integer> comb,int start,int [] candidate,List<List<Integer>> result)
-     {
-         if(remain==0)
-         {
-             result.add(new ArrayList<Integer> (comb));
-             return;
-         }
-         else if(remain<0)
-            return;
-
-            for(int i=start;i<candidate.length;i++)
+    public static void findCombination(int idx,int c[],int target,
+                                       List<List<Integer>> ans, List<Integer> ds)
+    {
+        if(idx==c.length)
+        {
+            if(target==0)
             {
-                comb.add(candidate[i]);
-                this.backtrack(remain-candidate[i],comb,i,candidate,result);
-                comb.removeLast();
+                ans.add(new ArrayList<>(ds));
+                return ;
             }
-     }
+            return;
+        }
+        if(c[idx]<=target)
+        {
+            ds.add(c[idx]);
+            findCombination(idx,c,target-c[idx],ans,ds);
+            ds.remove(ds.size()-1);
+        }
+        findCombination(idx+1,c,target,ans,ds);
+    }
 }
