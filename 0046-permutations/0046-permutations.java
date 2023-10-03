@@ -15,7 +15,6 @@ class Solution {
             list.add(new ArrayList(sublist));
             return;
         }
-        
         for(int i=0;i<nums.length;i++)
         {
             if(visited[i]==true)
@@ -25,8 +24,6 @@ class Solution {
             recursion(list,sublist,nums,visited);
             sublist.remove(sublist.size()-1);
             visited[i]=false;
-            
-           
         }
     }
 }
