@@ -29,52 +29,13 @@ class GFG {
 
 class Solution
 {
-   public static String rotateclockwise(String s){
-        char a[]= s.toCharArray();
-        char c=a[a.length-1];
-        int idx=a.length-2;
-        while(idx>=0)
-        {
-            a[idx+1]=a[idx];
-            idx--;
-        }
-        a[0]=c;
-        return String.valueOf(a);
-    }
-     public static String rotateAnticlock( String s){
-         char a[]= s.toCharArray();
-         char c=a[0];
-         int idx=1;
-         while(idx<a.length)
-         {
-             a[idx-1]=a[idx];
-             idx++;
-         }
-         a[a.length-1]=c;
-         return String.valueOf(a);
-    }
-    
+    //Function to check if a string can be obtained by rotating
+    //another string by exactly 2 places.
     public static boolean isRotated(String str1, String str2)
     {
-
-        // if(str1.length()!= str2.length()) return false;
-        // String clockwise="";
+        // Your code here
         
-        // for(int i=0;i<=2;i++){
-        // clockwise= rotateclockwise(str1);
-        // }
-        // if(clockwise.equals(str2)) return true;
-        
-        
-        // String anticlock="";
-        // for(int i=0;i<=2;i++)
-        // {
-        //     anticlock= rotateAnticlock(str1);
-        // }
-        // if(anticlock.equals(str2)) return true;
-        
-        // return false;
-         if (str1.length() != str2.length()) {
+    if (str1.length() != str2.length()) {
         return false;
     }
 
@@ -89,9 +50,8 @@ class Solution
     if (rotatedAnticlockwise.equals(str2)) {
         return true;
     }
-
     return false;
-        
+    
     }
     
 }
