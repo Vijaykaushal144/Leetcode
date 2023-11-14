@@ -44,32 +44,32 @@ class Solution {
     public static int val(char c)
     {
         if(c=='I') {
-            int a=1;
-            return a;}
+            
+            return 1;}
         else if(c=='V') 
-        {int a=5;
-            return a;}
+        {
+            return 5;}
         else if(c=='X')
         {
-            int a=10;
-            return a;}
+            
+            return 10;}
         
         else if(c=='L')
         {
-            int a=50;
-            return a;
+            
+            return 50;
             
         }
         else if(c=='C')
         {
-            int a=100; return a;
+             return 100;
         }
         else if(c=='D')
         {
-            int s=500; return s;
+            return 500;
         }
         else{
-            int a=1000; return a;
+             return 1000;
         }
     }
 }
